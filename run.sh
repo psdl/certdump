@@ -2,7 +2,8 @@
 
 function dump() {
     echo "$(date) Dumping certificates"
-
+    
+    cd /
     dumpcerts.sh /traefik/acme.json /traefik/ssl/
     ln -f /traefik/ssl/certs/* /traefik/ssl/
     ln -f /traefik/ssl/private/* /traefik/ssl/
